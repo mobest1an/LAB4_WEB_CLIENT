@@ -1,7 +1,14 @@
-import CheckInputs from "./CheckInputs";
 import React from "react";
-import AreaContainer from "./AreaView/AreaContainer";
 import useStore from "../../../bll/state/store";
+import loadable from '@loadable/component';
+
+const AreaContainer = loadable(() => import('./AreaView/AreaContainer'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
+
+const CheckInputs = loadable(() => import('./CheckInputs'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
 
 const ChecksContainer = () => {
 

@@ -20,18 +20,18 @@ const Authorization = () => {
     }
 
     return (
-        <div>
+        <div className={"form-control"}>
             <h1>Авторизация</h1>
-            <div>
-                <label htmlFor={"username"}>Имя пользователя</label>
-                <input id={"username"} type={"text"} ref={inputRefUsername} placeholder={"Username"}/>
-            </div>
-            <div>
-                <label htmlFor={"password"}>Пароль</label>
-                <input id={"password"} type={"password"} ref={inputRefPassword} placeholder={"Password"}/>
-            </div>
+            <label className={"label"}>
+                <span className={"label-text"}>Имя пользователя</span>
+            </label>
+            <input className={"input input-bordered"} id={"username"} type={"text"} ref={inputRefUsername} placeholder={"Username"}/>
+            <label className={"label"}>
+                <span className={"label-text"}>Пароль</span>
+            </label>
+            <input className={"input input-bordered"} id={"password"} type={"password"} ref={inputRefPassword} placeholder={"Password"}/>
             <label ref={msgRef}/>
-            <button onClick={authorization}>Авторизация</button>
+            <button className={"btn"} onClick={authorization}>Авторизация</button>
         </div>
     );
 }

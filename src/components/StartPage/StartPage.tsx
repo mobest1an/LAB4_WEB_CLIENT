@@ -14,8 +14,11 @@ const StartPage = () => {
 
     return (
         <div>
-            <NavLink to={"authorization"}>Авторизация</NavLink>
-            <NavLink to={"registration"}>Регистрация</NavLink>
+            <NavLink className={"link"} to={"authorization"}>Авторизация</NavLink>
+            <br/>
+            <NavLink className={"link"} to={"registration"}>Регистрация</NavLink>
+            <br/>
+            <br/>
             
             <div>
                 <Routes>

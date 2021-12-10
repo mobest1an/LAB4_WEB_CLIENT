@@ -1,5 +1,9 @@
-import Area from "./Area";
 import useStore, {CheckType} from "../../../../bll/state/store";
+import loadable from '@loadable/component';
+
+const Area = loadable(() => import('./Area'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
 
 const AreaContainer = (props: {onAreaClick: Function}) => {
     const checks = useStore(state => state.getChecks());

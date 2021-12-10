@@ -15,8 +15,8 @@ const Results = () => {
     });
 
     return (
-        <div>
-            <table>
+        <div className={"overflow-x-auto"}>
+            <table className={"table w-full table-zebra"}>
                 <thead>
                 <tr>
                     <th>X</th>

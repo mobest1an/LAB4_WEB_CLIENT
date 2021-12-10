@@ -8,7 +8,20 @@ const Header = () => {
 
     return(
         <div>
-            <button onClick={() => logout(destination)}>Выйти</button>
+            <header className="main-header">
+                <div className="container-main">
+                    <div className="university-title">
+                        <h1>Университет ИТМО</h1>
+                    </div>
+                    <div className="lab-title">
+                        <ul>
+                            <li>Карапетян Эрик Акопович P3215</li>
+                            <li>Вариант 1503</li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <button className={"btn"} onClick={() => logout(destination)}>Выйти</button>
         </div>
     );
 }

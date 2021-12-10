@@ -1,9 +1,20 @@
 import React, {useEffect} from 'react';
 import useStore from "../../bll/state/store";
 import {useNavigate} from "react-router-dom";
-import Header from "./Header";
-import ChecksContainer from "./Checks/ChecksContainer";
-import Results from "./Checks/Results";
+import loadable from '@loadable/component';
+import '../../App.css';
+
+const Header = loadable(() => import('./Header'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
+
+const ChecksContainer = loadable(() => import('./Checks/ChecksContainer'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
+
+const Results = loadable(() => import('./Checks/Results'), {
+    fallback: <div><h1>Loading...</h1></div>
+});
 
 const MainPage = () => {
 
